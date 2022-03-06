@@ -1,0 +1,11 @@
+block content
+h2 Add a Movie
+form(method='POST' action="/add")
+ div.form-group
+   label(for='name') Movie Title   :
+   input#name.form-control(type='text', placeholder='title' name='title')
+ div.form-group
+   label(for='email') Description  :
+   input#email.form-control(type='text', placeholder='description' name='description')
+   br
+   button.btn.btn-primary(type='submit') Add Your Movie

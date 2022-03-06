@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h2 My Movies
+  h4 This is an application for adding movies
+  hr
+  if (movies.length === 0)
+    | There are no movies in your list. Click on the link to add a movie
+  .row
+    each movie in movies
+     .col-sm-3
+       p #[strong Title: ] #{movie.title}
+       p #[strong Description: ] #{movie.description}
+       hr
+  br
+  br
+  a(href="/add") Add Your Movie
